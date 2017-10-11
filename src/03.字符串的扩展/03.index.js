@@ -40,8 +40,13 @@
 
 {
   //字符串模板
+  function foo(){
+    console.log('hello world')
+  }
   let a = 1
   console.log(`aaa${a}`);
+  //字符串{}中执行的是javascript代码  所以可以执行函数
+  `bbb${foo()}`
 }
 
 {
