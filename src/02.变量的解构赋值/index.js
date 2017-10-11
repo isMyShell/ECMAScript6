@@ -22,6 +22,22 @@
   //y 2
 
   let [m,n=2] = ['a','b']
+
+  let [q,t=1] = ['a',undefined]
+  //在es6中使用的是严格的 === ；所以t的值为1不是undefined
+  //但是如果
+  let [e,r] = ['q', null]
+  //r null 因为null 不严格等于undefined
+  //null == undefined //true
+  //null === undefined //false
+}
+
+{
+  function f(){
+    console.log('aaa')
+  }
+  let [a,b = f()] = ['a','b']
+  //惰性的赋值 右边的数组已经有b的值，就不会使用b的默认值了，实际上f()是没有执行的
 }
 
 
